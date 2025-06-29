@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PupilHelper - Your ultimate multi-tool website featuring image compression, PDF converter, password generator, EMI calculator, BMI calculator, and currency converter.">
+    <meta name="keywords" content="tools, image compression, PDF converter, password generator, EMI calculator, BMI calculator, currency converter, utilities">
+    <meta name="author" content="PupilHelper">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="PupilHelper - Multi-Tool Website">
+    <meta property="og:description" content="Your ultimate multi-tool website with various utilities and calculators">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pupilhelper.com">
+    <title>PupilHelper - Multi-Tool Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- jsPDF Library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-tools"></i> PupilHelper</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="#login" class="btn btn-login">Login</a>
+                    <a href="#signup" class="btn btn-signup">Sign Up</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="container">
+                <div class="hero">
+                    <h1 class="hero-title">Welcome to PupilHelper</h1>
+                    <p class="hero-subtitle">Your ultimate multi-tool website with powerful utilities</p>
+                </div>
+
+                <!-- Tools Grid -->
+                <div class="tools-grid">
+                    <!-- Image Compression Tool -->
+                    <div class="tool-card" data-tool="image-compress">
+                        <div class="tool-icon">
+                            <i class="fas fa-compress-alt"></i>
+                        </div>
+                        <h3>Image Compression</h3>
+                        <p>Compress your images without losing quality</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- PDF Converter Tool -->
+                    <div class="tool-card" data-tool="pdf-converter">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>PDF Converter</h3>
+                        <p>Convert files to and from PDF format</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- Password Generator Tool -->
+                    <div class="tool-card" data-tool="password-generator">
+                        <div class="tool-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Password Generator</h3>
+                        <p>Generate strong and secure passwords</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- EMI Calculator Tool -->
+                    <div class="tool-card" data-tool="emi-calculator">
+                        <div class="tool-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>EMI Calculator</h3>
+                        <p>Calculate EMI for loans and mortgages</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- BMI Calculator Tool -->
+                    <div class="tool-card" data-tool="bmi-calculator">
+                        <div class="tool-icon">
+                            <i class="fas fa-weight"></i>
+                        </div>
+                        <h3>BMI Calculator</h3>
+                        <p>Calculate your Body Mass Index</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- Currency Converter Tool -->
+                    <div class="tool-card" data-tool="currency-converter">
+                        <div class="tool-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Currency Converter</h3>
+                        <p>Convert between different currencies</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>PupilHelper is your go-to destination for essential online tools and utilities. We provide a comprehensive suite of tools designed to make your daily tasks easier and more efficient.</p>
+                        <p>Our mission is to offer reliable, user-friendly tools that help you accomplish various tasks without the need for multiple applications or complex software installations.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Secure</h4>
+                                <p>All tools are secure and privacy-focused</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bolt"></i>
+                                <h4>Fast</h4>
+                                <p>Lightning-fast processing and results</p>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-mobile-alt"></i>
+                                <h4>Responsive</h4>
+                                <p>Works perfectly on all devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-image"></i>
+                        <h3>Image Tools</h3>
+                        <p>Compress, resize, and optimize your images for web use.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Document Tools</h3>
+                        <p>Convert and manage various document formats including PDF.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Security Tools</h3>
+                        <p>Generate secure passwords and protect your data.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Calculators</h3>
+                        <p>Financial and health calculators for your daily needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@pupilhelper.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (9582) 957-821</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>GSR Center Point, Sector 6 A, Lucknow UP 226002</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <div class="button-center">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-send"></i> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Tool Modals -->
+    <!-- Image Compression Modal -->
+    <div id="image-compress-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Image Compression Tool</h2>
+            <div class="tool-interface">
+                <div class="upload-area">
+                    <input type="file" id="image-input" accept="image/*" multiple>
+                    <label for="image-input">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Click to upload images or drag and drop</p>
+                    </label>
+                </div>
+                <div class="compression-options">
+                    <label>Quality:</label>
+                    <input type="range" id="quality-slider" min="1" max="100" value="80">
+                    <span id="quality-value">80%</span>
+                </div>
+                <div id="image-preview"></div>
+                <div class="button-center">
+                    <button id="compress-btn" class="btn btn-primary">Compress Images</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF Converter Modal -->
+    <div id="pdf-converter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>PDF Converter Tool</h2>
+            <div class="tool-interface">
+                <div class="upload-area">
+                    <input type="file" id="pdf-input" accept=".doc,.docx,.txt,.jpg,.jpeg,.png,.html">
+                    <label for="pdf-input">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Click to upload files or drag and drop</p>
+                        <small>Supported formats: DOC, DOCX, TXT, JPG, PNG, HTML</small>
+                    </label>
+                </div>
+                <div class="file-info" id="file-info" style="display: none;">
+                    <h4>Selected File:</h4>
+                    <p id="file-name"></p>
+                    <p id="file-size"></p>
+                </div>
+                <div class="button-center">
+                    <button id="convert-btn" class="btn btn-primary">Convert to PDF</button>
+                </div>
+                <div id="conversion-result" class="conversion-result" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Generator Modal -->
+    <div id="password-generator-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Password Generator Tool</h2>
+            <div class="tool-interface">
+                <div class="password-options">
+                    <div class="option-group">
+                        <label>Password Length:</label>
+                        <input type="range" id="length-slider" min="8" max="50" value="12">
+                        <span id="length-value">12</span>
+                    </div>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="uppercase" checked> Uppercase Letters</label>
+                        <label><input type="checkbox" id="lowercase" checked> Lowercase Letters</label>
+                        <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                        <label><input type="checkbox" id="symbols"> Special Symbols</label>
+                    </div>
+                </div>
+                <div class="password-result">
+                    <input type="text" id="generated-password" readonly>
+                    <button id="copy-password" class="btn btn-secondary">
+                        <i class="bi bi-clipboard"></i>
+                    </button>
+                </div>
+                <div class="button-center">
+                    <button id="generate-btn" class="btn btn-primary">Generate Password</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMI Calculator Modal -->
+    <div id="emi-calculator-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>EMI Calculator Tool</h2>
+            <div class="tool-interface">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label><i class="bi bi-currency-rupee"></i> Loan Amount:</label>
+                        <input type="number" id="loan-amount" placeholder="Enter loan amount" min="0">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="bi bi-percent"></i> Interest Rate (% per year):</label>
+                        <input type="number" id="interest-rate" placeholder="Enter interest rate" min="0" max="50" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label><i class="bi bi-calendar-range"></i> Loan Term (years):</label>
+                        <input type="number" id="loan-term" placeholder="Enter loan term" min="1" max="30">
+                    </div>
+                </div>
+                <div class="button-center">
+                    <button id="calculate-emi" class="btn btn-primary">
+                        <i class="bi bi-calculator"></i> Calculate EMI
+                    </button>
+                </div>
+                <div id="emi-result" class="calculator-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BMI Calculator Modal -->
+    <div id="bmi-calculator-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>BMI Calculator Tool</h2>
+            <div class="tool-interface">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>Weight (kg):</label>
+                        <input type="number" id="weight" placeholder="Enter weight in kg" step="0.1">
+                    </div>
+                    <div class="input-group">
+                        <label>Height (cm):</label>
+                        <input type="number" id="height" placeholder="Enter height in cm">
+                    </div>
+                </div>
+                <div class="button-center">
+                    <button id="calculate-bmi" class="btn btn-primary">
+                        <i class="bi bi-calculator"></i> Calculate BMI
+                    </button>
+                </div>
+                <div id="bmi-result" class="calculator-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Currency Converter Modal -->
+    <div id="currency-converter-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Currency Converter Tool</h2>
+            <div class="tool-interface">
+                <div class="converter-inputs">
+                    <div class="input-group">
+                        <label>Amount:</label>
+                        <input type="number" id="amount" placeholder="Enter amount" step="0.01">
+                    </div>
+                    <div class="input-group">
+                        <label>From Currency:</label>
+                        <select id="from-currency">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>To Currency:</label>
+                        <select id="to-currency">
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="CHF">CHF - Swiss Franc</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button-center">
+                    <button id="convert-currency" class="btn btn-primary">
+                        <i class="bi bi-currency-exchange"></i> Convert Currency
+                    </button>
+                </div>
+                <div id="conversion-loading" class="loading-spinner" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Converting...</p>
+                </div>
+                <div id="currency-result" class="calculator-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close">&times;</span>
+            <div class="auth-header">
+                <i class="bi bi-person-circle"></i>
+                <h2>Welcome Back</h2>
+                <p>Sign in to your account</p>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                        <button type="button" class="password-toggle">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <div class="button-center">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-box-arrow-in-right"></i> Sign In
+                    </button>
+                </div>
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+                <div class="social-login">
+                    <button type="button" class="btn btn-social btn-google">
+                        <i class="bi bi-google"></i> Continue with Google
+                    </button>
+                    <button type="button" class="btn btn-social btn-facebook">
+                        <i class="bi bi-facebook"></i> Continue with Facebook
+                    </button>
+                </div>
+                <p class="auth-footer">Don't have an account? <a href="#signup" class="auth-link">Sign up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content auth-modal">
+            <span class="close">&times;</span>
+            <div class="auth-header">
+                <i class="bi bi-person-plus"></i>
+                <h2>Create Account</h2>
+                <p>Join us today</p>
+            </div>
+            <form class="auth-form">
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="bi bi-person"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="bi bi-envelope"></i>
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                        <button type="button" class="password-toggle">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-icon-wrapper">
+                        <i class="bi bi-lock-fill"></i>
+                        <input type="password" placeholder="Confirm Password" required>
+                        <button type="button" class="password-toggle">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
+                    </label>
+                </div>
+                <div class="button-center">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-person-plus"></i> Create Account
+                    </button>
+                </div>
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+                <div class="social-login">
+                    <button type="button" class="btn btn-social btn-google">
+                        <i class="bi bi-google"></i> Continue with Google
+                    </button>
+                    <button type="button" class="btn btn-social btn-facebook">
+                        <i class="bi bi-facebook"></i> Continue with Facebook
+                    </button>
+                </div>
+                <p class="auth-footer">Already have an account? <a href="#login" class="auth-link">Sign in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-tools"></i> PupilHelper</h3>
+                    <p>Your ultimate multi-tool website with powerful utilities for everyday tasks.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="#image-compress">Image Compression</a></li>
+                        <li><a href="#pdf-converter">PDF Converter</a></li>
+                        <li><a href="#password-generator">Password Generator</a></li>
+                        <li><a href="#emi-calculator">EMI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@pupilhelper.com</p>
+                    <p><i class="fas fa-phone"></i> +91 (9582) 957-821</p>
+                    <p><i class="fas fa-map-marker-alt"></i>GSR Center Point, Sector 6 A, Lucknow UP 226002</p>
+                </div>
+            </div>
+            
+            <!-- Google AdSense -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-1234567890123456"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 PupilHelper. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
