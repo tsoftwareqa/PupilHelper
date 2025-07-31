@@ -33,15 +33,12 @@
             </div>
             <nav class="nav">
                 <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#image-compression-tool" class="nav-link">Image Compression</a></li>
+                    <li><a href="#pdf-converter-tool" class="nav-link">Pdf converter</a></li>
+                    <li><a href="#images-conversion-tool" class="nav-link">Images conversion</a></li>
+                    <li><a href="#other-tools" class="nav-link">Other Tools</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#contact" class="nav-link">Contact Us</a></li>
                 </ul>
-                <div class="auth-buttons">
-                    <a href="#login" class="btn btn-login">Login</a>
-                    <a href="#signup" class="btn btn-signup">Sign Up</a>
-                </div>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -58,7 +55,9 @@
             <div class="container">
                 <div class="hero">
                     <h1 class="hero-title">Welcome to PupilHelper</h1>
-                    <p class="hero-subtitle">Your ultimate multi-tool web Platform with powerful utilities</p>
+                    <p class="hero-subtitle">Your ultimate multi-tool web Platform with powerful utilities and Free Online Toolkit Convert, Calculate & Generate Anything in Seconds!
+                        100+ easy-to-use tools for work, study, and daily life no installs, no signup!</p>
+                    <p class="hero-subtitle">Popular Tools: PDF Converter | Password Generator | BMI Calculator</p>
                 </div>
 
                 <amp-ad width="100vw" height="320"
@@ -72,7 +71,7 @@
                 <!-- Tools Grid -->
                 <div class="tools-grid">
                     <!-- Image Compression Tool -->
-                    <div class="tool-card" data-tool="image-compress">
+                    <div id="image-compression-tool" class="tool-card" data-tool="image-compress">
                         <div class="tool-icon">
                             <i class="fas fa-compress-alt"></i>
                         </div>
@@ -82,12 +81,22 @@
                     </div>
 
                     <!-- PDF Converter Tool -->
-                    <div class="tool-card" data-tool="pdf-converter">
+                    <div id="pdf-converter-tool" class="tool-card" data-tool="pdf-converter">
                         <div class="tool-icon">
                             <i class="fas fa-file-pdf"></i>
                         </div>
                         <h3>PDF Converter</h3>
                         <p>Convert files to and from PDF format</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- Images Conversion Tool -->
+                    <div id="images-conversion-tool" class="tool-card" data-tool="images-conversion">
+                        <div class="tool-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <h3>Images conversion</h3>
+                        <p>Convert images between formats</p>
                         <button class="btn btn-primary">Use Tool</button>
                     </div>
 
@@ -128,6 +137,26 @@
                         </div>
                         <h3>Currency Converter</h3>
                         <p>Convert between different currencies</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- Merge PDF Tool -->
+                    <div id="merge-pdf-tool" class="tool-card" data-tool="merge-pdf">
+                        <div class="tool-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Merge PDF</h3>
+                        <p>Combine multiple PDF files into one</p>
+                        <button class="btn btn-primary">Use Tool</button>
+                    </div>
+
+                    <!-- Split PDF Tool -->
+                    <div id="split-pdf-tool" class="tool-card" data-tool="split-pdf">
+                        <div class="tool-icon">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <h3>Split PDF</h3>
+                        <p>Split a PDF file into multiple documents</p>
                         <button class="btn btn-primary">Use Tool</button>
                     </div>
                 </div>
@@ -441,135 +470,13 @@
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="login-modal" class="modal">
-        <div class="modal-content auth-modal">
-            <span class="close">&times;</span>
-            <div class="auth-header">
-                <i class="bi bi-person-circle"></i>
-                <h2>Welcome Back</h2>
-                <p>Sign in to your account</p>
-            </div>
-            <form class="auth-form">
-                <div class="form-group">
-                    <div class="input-icon-wrapper">
-                        <i class="bi bi-envelope"></i>
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon-wrapper">
-                        <i class="bi bi-lock"></i>
-                        <input type="password" placeholder="Password" required>
-                        <button type="button" class="password-toggle">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="form-options">
-                    <label class="checkbox-wrapper">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        Remember me
-                    </label>
-                    <a href="#" class="forgot-password">Forgot Password?</a>
-                </div>
-                <div class="button-center">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-box-arrow-in-right"></i> Sign In
-                    </button>
-                </div>
-                <div class="auth-divider">
-                    <span>or</span>
-                </div>
-                <div class="social-login">
-                    <button type="button" class="btn btn-social btn-google">
-                        <i class="bi bi-google"></i> Continue with Google
-                    </button>
-                    <button type="button" class="btn btn-social btn-facebook">
-                        <i class="bi bi-facebook"></i> Continue with Facebook
-                    </button>
-                </div>
-                <p class="auth-footer">Don't have an account? <a href="#signup" class="auth-link">Sign up</a></p>
-            </form>
-        </div>
-    </div>
-
-    <!-- Signup Modal -->
-    <div id="signup-modal" class="modal">
-        <div class="modal-content auth-modal">
-            <span class="close">&times;</span>
-            <div class="auth-header">
-                <i class="bi bi-person-plus"></i>
-                <h2>Create Account</h2>
-                <p>Join us today</p>
-            </div>
-            <form class="auth-form">
-                <div class="form-group">
-                    <div class="input-icon-wrapper">
-                        <i class="bi bi-person"></i>
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon-wrapper">
-                        <i class="bi bi-envelope"></i>
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon-wrapper">
-                        <i class="bi bi-lock"></i>
-                        <input type="password" placeholder="Password" required>
-                        <button type="button" class="password-toggle">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="input-icon-wrapper">
-                        <i class="bi bi-lock-fill"></i>
-                        <input type="password" placeholder="Confirm Password" required>
-                        <button type="button" class="password-toggle">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="form-options">
-                    <label class="checkbox-wrapper">
-                        <input type="checkbox" required>
-                        <span class="checkmark"></span>
-                        I agree to the <a href="#" class="terms-link">Terms & Conditions</a>
-                    </label>
-                </div>
-                <div class="button-center">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="bi bi-person-plus"></i> Create Account
-                    </button>
-                </div>
-                <div class="auth-divider">
-                    <span>or</span>
-                </div>
-                <div class="social-login">
-                    <button type="button" class="btn btn-social btn-google">
-                        <i class="bi bi-google"></i> Continue with Google
-                    </button>
-                    <button type="button" class="btn btn-social btn-facebook">
-                        <i class="bi bi-facebook"></i> Continue with Facebook
-                    </button>
-                </div>
-                <p class="auth-footer">Already have an account? <a href="#login" class="auth-link">Sign in</a></p>
-            </form>
-        </div>
-    </div>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><i class="fas fa-tools"></i> PupilHelper</h3>
-                    <p>Your ultimate multi-tool website with powerful utilities for everyday tasks.</p>
+                    <p>Your ultimate multi-tool platform with powerful utilities for everyday tasks.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -589,17 +496,18 @@
                 <div class="footer-section">
                     <h4>Tools</h4>
                     <ul>
-                        <li><a href="#image-compress">Image Compression</a></li>
-                        <li><a href="#pdf-converter">PDF Converter</a></li>
+                        <li><a href="#image-compression-tool">Image Compression</a></li>
+                        <li><a href="#pdf-converter-tool">PDF Converter</a></li>
                         <li><a href="#password-generator">Password Generator</a></li>
                         <li><a href="#emi-calculator">EMI Calculator</a></li>
+                        <li><a href="#images-conversion-tool">Images Conversion</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p><i class="fas fa-envelope"></i> info@pupilhelper.com</p>
                     <p><i class="fas fa-phone"></i> +91 (9582) 957-821</p>
-                    <p><i class="fas fa-map-marker-alt"></i>GSR Center Point, Sector 6 A, Lucknow UP 226002</p>
+                    <p><i class="fas fa-map-marker-alt"></i> GSR Center Point, Sector 6 A, Lucknow UP 226002</p>
                 </div>
             </div>
             

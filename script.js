@@ -54,14 +54,14 @@ function initNavigation() {
 // Modal functionality
 function initModals() {
     const modals = document.querySelectorAll('.modal');
-    const modalTriggers = document.querySelectorAll('[data-tool], .btn-login, .btn-signup');
+    const modalTriggers = document.querySelectorAll('[data-tool]'); // Removed .btn-login, .btn-signup
     const closeButtons = document.querySelectorAll('.close');
 
     // Open modals
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = this.getAttribute('data-tool') || this.getAttribute('href').substring(1);
+            const target = this.getAttribute('data-tool');
             const modal = document.getElementById(`${target}-modal`);
             if (modal) {
                 modal.style.display = 'block';
@@ -111,7 +111,6 @@ function initTools() {
     initBMICalculator();
     initCurrencyConverter();
     initContactForm();
-    initAuthForms();
 }
 
 // Image Compression Tool
@@ -1140,208 +1139,6 @@ function initContactForm() {
         alert('Thank you for your message! We will get back to you soon.');
         this.reset();
     });
-}
-
-// Auth Forms
-function initAuthForms() {
-    const loginForm = document.querySelector('#login-modal .auth-form');
-    const signupForm = document.querySelector('#signup-modal .auth-form');
-
-    // Password toggle functionality
-    function initPasswordToggles() {
-        const passwordToggles = document.querySelectorAll('.password-toggle');
-        
-        passwordToggles.forEach(toggle => {
-            toggle.addEventListener('click', function() {
-                const input = this.previousElementSibling;
-                const icon = this.querySelector('i');
-                
-                if (input.type === 'password') {
-                    input.type = 'text';
-                    icon.className = 'bi bi-eye-slash';
-                } else {
-                    input.type = 'password';
-                    icon.className = 'bi bi-eye';
-                }
-            });
-        });
-    }
-
-    // Form validation and enhancement
-    function enhanceForm(form) {
-        const inputs = form.querySelectorAll('input');
-        
-        inputs.forEach(input => {
-            // Add focus effects
-            input.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', function() {
-                this.parentElement.classList.remove('focused');
-            });
-
-            // Real-time validation
-            input.addEventListener('input', function() {
-                validateInput(this);
-            });
-        });
-    }
-
-    function validateInput(input) {
-        const value = input.value.trim();
-        let isValid = true;
-        let errorMessage = '';
-
-        switch (input.type) {
-            case 'email':
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                isValid = emailRegex.test(value);
-                errorMessage = 'Please enter a valid email address';
-                break;
-            case 'password':
-                if (input.placeholder.includes('Confirm')) {
-                    const passwordInput = input.parentElement.parentElement.previousElementSibling.querySelector('input[type="password"]');
-                    isValid = value === passwordInput.value;
-                    errorMessage = 'Passwords do not match';
-                } else {
-                    isValid = value.length >= 6;
-                    errorMessage = 'Password must be at least 6 characters';
-                }
-                break;
-            case 'text':
-                if (input.placeholder.includes('Name')) {
-                    isValid = value.length >= 2;
-                    errorMessage = 'Name must be at least 2 characters';
-                }
-                break;
-        }
-
-        // Visual feedback
-        if (value && !isValid) {
-            input.style.borderColor = '#f44336';
-            showInputError(input, errorMessage);
-        } else {
-            input.style.borderColor = '';
-            hideInputError(input);
-        }
-
-        return isValid;
-    }
-
-    function showInputError(input, message) {
-        let errorDiv = input.parentElement.querySelector('.input-error');
-        if (!errorDiv) {
-            errorDiv = document.createElement('div');
-            errorDiv.className = 'input-error';
-            input.parentElement.appendChild(errorDiv);
-        }
-        errorDiv.textContent = message;
-        errorDiv.style.display = 'block';
-    }
-
-    function hideInputError(input) {
-        const errorDiv = input.parentElement.querySelector('.input-error');
-        if (errorDiv) {
-            errorDiv.style.display = 'none';
-        }
-    }
-
-    // Login form handling
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const email = this.querySelector('input[type="email"]').value;
-        const password = this.querySelector('input[type="password"]').value;
-        const rememberMe = this.querySelector('input[type="checkbox"]').checked;
-
-        if (!email || !password) {
-            showNotification('Please fill all required fields!', 'error');
-            return;
-        }
-
-        if (!validateInput(this.querySelector('input[type="email"]')) || 
-            !validateInput(this.querySelector('input[type="password"]'))) {
-            showNotification('Please correct the errors in the form!', 'error');
-            return;
-        }
-
-        // Show loading state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Signing In...';
-        submitBtn.disabled = true;
-
-        // Simulate login process
-        setTimeout(() => {
-            showNotification('Login successful! Welcome back.', 'success');
-            this.reset();
-            this.closest('.modal').style.display = 'none';
-            
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    });
-
-    // Signup form handling
-    signupForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const password = this.querySelectorAll('input[type="password"]')[0].value;
-        const confirmPassword = this.querySelectorAll('input[type="password"]')[1].value;
-        const agreeTerms = this.querySelector('input[type="checkbox"]').checked;
-
-        if (!name || !email || !password || !confirmPassword) {
-            showNotification('Please fill all required fields!', 'error');
-            return;
-        }
-
-        if (!agreeTerms) {
-            showNotification('Please agree to the Terms & Conditions!', 'error');
-            return;
-        }
-
-        if (!validateInput(this.querySelector('input[type="text"]')) ||
-            !validateInput(this.querySelector('input[type="email"]')) ||
-            !validateInput(this.querySelectorAll('input[type="password"]')[0]) ||
-            !validateInput(this.querySelectorAll('input[type="password"]')[1])) {
-            showNotification('Please correct the errors in the form!', 'error');
-            return;
-        }
-
-        // Show loading state
-        const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Creating Account...';
-        submitBtn.disabled = true;
-
-        // Simulate signup process
-        setTimeout(() => {
-            showNotification('Account created successfully! Welcome to PupilHelper.', 'success');
-            this.reset();
-            this.closest('.modal').style.display = 'none';
-            
-            // Reset button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
-    });
-
-    // Social login buttons
-    document.querySelectorAll('.btn-social').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const provider = this.classList.contains('btn-google') ? 'Google' : 'Facebook';
-            showNotification(`${provider} login would be implemented with OAuth integration.`, 'info');
-        });
-    });
-
-    // Initialize password toggles and form enhancement
-    initPasswordToggles();
-    enhanceForm(loginForm);
-    enhanceForm(signupForm);
 }
 
 // Smooth scrolling
