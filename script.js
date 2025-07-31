@@ -6,6 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     initTools();
     initSmoothScrolling();
     initAnimations();
+    // Images Conversion modal trigger for card
+    const imagesConversionCard = document.querySelector('[data-tool="images-conversion"]');
+    if (imagesConversionCard) {
+        imagesConversionCard.addEventListener('click', function() {
+            const modal = document.getElementById('images-conversion-modal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    }
 });
 
 // Navigation functionality

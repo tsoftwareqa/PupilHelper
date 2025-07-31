@@ -470,6 +470,38 @@
         </div>
     </div>
 
+    <!-- Images Conversion Modal -->
+    <div id="images-conversion-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Images Conversion Tool</h2>
+            <div class="tool-interface">
+                <div class="upload-area">
+                    <input type="file" id="images-conversion-input" accept="image/*">
+                    <label for="images-conversion-input">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Click to upload an image or drag and drop</p>
+                    </label>
+                </div>
+                <div class="conversion-options">
+                    <label for="format-select">Convert to:</label>
+                    <select id="format-select">
+                        <option value="jpg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WEBP</option>
+                        <option value="bmp">BMP</option>
+                        <option value="gif">GIF</option>
+                        <option value="tiff">TIFF</option>
+                    </select>
+                </div>
+                <div id="images-conversion-preview"></div>
+                <div class="button-center">
+                    <button id="convert-image-btn" class="btn btn-primary">Convert Image</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
